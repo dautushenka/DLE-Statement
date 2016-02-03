@@ -1,0 +1,90 @@
+/* 
+    Document   : statement
+    Created on : 06.04.2012, 17:12:52
+    Author     : kaliostro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#statement { 
+    display: block;
+}
+
+#statement .clear {display: block; clear: both; content: '.'}
+
+.loader {display: none; text-align: center;}
+
+#statement ul {list-style: none}
+#statement input[type="text"] {width: 350px; border: 1px solid #888; vertical-align: middle}
+#statement textarea {width: 350px; height: 170px; border: 1px solid #888}
+
+#statement #head
+{
+    padding: 20px;
+    border: 1px solid #CCC;
+    margin: 5px;
+}
+#statement #head .loader
+{
+    float: left;
+}
+
+
+#statement #search_result
+{
+    display: none;
+}
+
+#statement #search_result .result ul {margin: 0}
+
+#statement #search_result .result ul li
+{
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #CCC;
+}
+
+#statement #search_result .result ul li a.show {float: right;}
+#statement #search_result .result ul li div.detail {display: none; border: dotted 1px #CCC}
+
+/* Filter */
+#statement #filter_form {padding: 5px 10px;}
+#statement #filter_form table {width: 100%;}
+#statement #filter_form table td {padding: 5px; vertical-align: top;}
+#statement #filter_form table td div.show {float: left}
+#statement #filter_form table td div.order {float: right; }
+#statement #filter_form table tr.filter {display: none}
+
+/* Statement */
+#statement .statement .st-rate {font-size: 120%; text-align: center; line-height: 1.4em;
+                                float: left; min-width: 40px; min-height: 50px; padding: 5px;}
+#statement .statement .st-rate .rate {font-size: 2em;}
+#statement .statement .st-rate .plus {color: green}
+#statement .statement .st-rate .minus {color: red}
+
+/* Short */
+#statement .statement.short {margin-bottom: 10px;}
+#statement .statement.short .content {margin-left: 60px; padding-top: 5px;}
+#statement .statement.short .vote, #statement .statement.short div.cancel {clear: none; margin-top: 10px;}
+#statement .statement.short .username {float: right; font: bold; padding-right: 15px;}
+#statement .statement.short .loader {text-align: left; margin-top: 10px}
+
+/* Full */
+#statement .statement.full {padding: 0 10px;}
+#statement .statement.full .content {margin-left: 80px;}
+#statement .statement.full h1 {font: 2em bold;}
+#statement .statement.full .username {float: right; padding: 5px;}
+#statement .statement.full div.answer-container {padding: 5px; border: 1px solid #ccc; border-radius: 4px; margin-top: 5px;}
+#statement .statement.full div.answer-container span {font-weight: bold; padding-bottom: 5px;}
+#statement .statement.full .loader {margin-top: 5px}
+
+#answer textarea {width: 250px; height: 125px;}
+
+/* commnet*/
+#statement #comment_form .guest {display: none}
+#statement #comment_form .error {outline: 2px solid red; border-color: transparent}
+
+/* newStatement*/
+#statement #statement_form .guest {display: none}
+#statement #statement_form .error {outline: 1px solid red; border-color: transparent}
+

@@ -1,0 +1,4 @@
+<ul>
+    {rows}
+</ul>
+{pages}
