@@ -1,27 +1,27 @@
-1. Из папки uploads заливаем файлы в корень сайта
-2. Папку Statement из папки templates заливаем в папку с вашим шаблоном
-3. Файл schema.sql  выполняем в MySQL
+1. РР· РїР°РїРєРё uploads Р·Р°Р»РёРІР°РµРј С„Р°Р№Р»С‹ РІ РєРѕСЂРµРЅСЊ СЃР°Р№С‚Р°
+2. РџР°РїРєСѓ Statement РёР· РїР°РїРєРё templates Р·Р°Р»РёРІР°РµРј РІ РїР°РїРєСѓ СЃ РІР°С€РёРј С€Р°Р±Р»РѕРЅРѕРј
+3. Р¤Р°Р№Р» schema.sql  РІС‹РїРѕР»РЅСЏРµРј РІ MySQL
 
-4. Открываем файл  engine/engine.php
-Находим
+4. РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р»  engine/engine.php
+РќР°С…РѕРґРёРј
 switch ( $do ) {
 
-После вставляем
+РџРѕСЃР»Рµ РІСЃС‚Р°РІР»СЏРµРј
 	case "statement" :
 		include ENGINE_DIR . '/modules/Statement/statement.php';
 		break;
         
-Ниже находим
+РќРёР¶Рµ РЅР°С…РѕРґРёРј
 if ($titl_e) $s_navigation .= " &raquo; " . $titl_e;
 
-После вставляем
+РџРѕСЃР»Рµ РІСЃС‚Р°РІР»СЏРµРј
 if ($do == 'statement') $s_navigation = $front->getBreadcrumbs();
 
-5. ОТкрываем файл .htaccess
-Находим
+5. РћРўРєСЂС‹РІР°РµРј С„Р°Р№Р» .htaccess
+РќР°С…РѕРґРёРј
 RewriteEngine On
 
-После добавляем
+РџРѕСЃР»Рµ РґРѕР±Р°РІР»СЏРµРј
 # Statement
 RewriteRule ^statement$ index.php?do=statement [L]
 RewriteRule ^statement/add$ index.php?do=statement&action=newStatement [L]
@@ -31,4 +31,4 @@ RewriteRule ^statement/list$ index.php?do=statement&action=list [L]
 RewriteRule ^statement/list/([0-9]+)$ index.php?do=statement&action=list&page=$1 [L]
 
 
-6. Конфигурация модуля находиться в файле /engine/modules/Statement/config.php
+6. РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ С„Р°Р№Р»Рµ /engine/modules/Statement/config.php
